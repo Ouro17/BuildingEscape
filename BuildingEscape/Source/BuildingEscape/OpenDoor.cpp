@@ -19,13 +19,6 @@ UOpenDoor::UOpenDoor()
 void UOpenDoor::BeginPlay()
 {
 	Super::BeginPlay();
-
-	// if (grade < 91) {
-	// 	auto rotator = FRotator(0, grade, 0);
-	// 	owner->SetActorRotation(rotator);
-
-	// 	grade += 1;
-	// }
 }
 
 
@@ -33,5 +26,12 @@ void UOpenDoor::BeginPlay()
 void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+	 if (grade < 91.f) {
+	 	auto rotator = FRotator(0.f, grade, 0.f);
+	 	owner->SetActorRotation(rotator);
+		
+	 	grade += 1.f;
+	 }
 }
 
