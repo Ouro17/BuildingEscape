@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Check MIT License for coypright issues.
+=======
+// Fill out your copyright notice in the Description page of Project Settings.
+>>>>>>> 4934d918720e58d2c141c605602beb0034702cdb
 
 #pragma once
 
