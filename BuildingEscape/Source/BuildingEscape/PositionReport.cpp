@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 // Check MIT License for coypright issues.
-=======
-// Fill out your copyright notice in the Description page of Project Settings.
->>>>>>> 4934d918720e58d2c141c605602beb0034702cdb
-
 
 #include "PositionReport.h"
 #include "GameFramework/Actor.h"
@@ -16,13 +11,11 @@ UPositionReport::UPositionReport()
 	PrimaryComponentTick.bCanEverTick = true;
 }
 
-
 // Called when the game starts
 void UPositionReport::BeginPlay()
 {
 	Super::BeginPlay();
 
-<<<<<<< HEAD
 	auto owner = GetOwner();
 
 	FString name = owner->GetName();
@@ -30,19 +23,10 @@ void UPositionReport::BeginPlay()
 	FString location = owner->GetTransform().GetLocation().ToString();
 
 	UE_LOG(LogTemp, Warning, TEXT("%s is on %s"), *name, *location);
-=======
-	FString name = GetOwner()->GetName();
-
-	UE_LOG(LogTemp, Warning, TEXT("Hello from position report for object %s"), *name);
->>>>>>> 4934d918720e58d2c141c605602beb0034702cdb
 }
-
 
 // Called every frame
 void UPositionReport::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	// ...
 }
-

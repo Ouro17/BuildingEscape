@@ -1,6 +1,5 @@
 // Check MIT License for coypright issues.
 
-
 #include "OpenDoor.h"
 #include "GameFramework/Actor.h"
 
@@ -12,8 +11,6 @@ UOpenDoor::UOpenDoor()
 	PrimaryComponentTick.bCanEverTick = true;
 
 	owner = GetOwner();
-	transform = owner->GetTransform();
-
 	grade = 0;
 }
 
@@ -36,8 +33,5 @@ void UOpenDoor::BeginPlay()
 void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	
-
 }
 

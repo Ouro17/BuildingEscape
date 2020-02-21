@@ -26,7 +26,5 @@ public:
 
 private:
 	AActor* owner;
-	FTransform transform;
 	float grade;
-		
 };
