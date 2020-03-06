@@ -4,8 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Engine/TriggerVolume.h"
 #include "OpenDoor.generated.h"
-
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class BUILDINGESCAPE_API UOpenDoor : public UActorComponent
@@ -25,6 +25,19 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 private:
+	void OpenDoor();
+
+	void CloseDoor();
+
 	AActor* owner;
-	float grade;
+
+	float currentAngle;
+
+	UPROPERTY(VisibleAnywhere)
+	float openAngle = 90.f;
+
+	UPROPERTY(EditAnywhere)
+	ATriggerVolume* pressurePlate;
+
+	AActor* actorThatOpens;
 };
